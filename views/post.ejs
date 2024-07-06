@@ -1,0 +1,79 @@
+<!-- views/post.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= post.title %></title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #1e1e1e;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+
+    h1, h2, h3 {
+      color: #fff;
+      text-align: center;
+    }
+
+    .post {
+      margin-bottom: 20px;
+      padding: 10px;
+      border: 1px solid #666;
+      background-color: #444;
+    }
+
+    .post p {
+      margin-bottom: 10px;
+      color: #ccc;
+    }
+
+    .post small {
+      color: #999;
+    }
+
+    .back-link {
+      display: block;
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    .back-link a {
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      border-radius: 4px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .back-link a:hover {
+      background-color: #3f7ec2;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1><%= post.title %></h1>
+    <div class="post">
+      <p><%= post.content %></p>
+      <small><%= post.date.toDateString() %></small>
+    </div>
+    <div class="back-link">
+      <a href="/">Back to Home</a>
+    </div>
+  </div>
+</body>
+</html>
